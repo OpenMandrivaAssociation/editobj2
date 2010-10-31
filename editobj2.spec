@@ -3,7 +3,7 @@
 Name: 	 	editobj2
 Summary: 	Tkinter dialog box for editing any Python object
 Version: 	0.2.1
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 Source:		EditObj2-%{version}.tar.gz
 URL:		http://home.gna.org/oomadness/en/editobj/
 License:	GPLv2
