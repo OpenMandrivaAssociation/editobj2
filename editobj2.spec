@@ -1,9 +1,9 @@
-%define	oname	EditObj
+%define	oname	EditObj2
 
 Name: 	 	editobj2
 Summary: 	Tkinter dialog box for editing any Python object
-Version: 	0.2.1
-Release: 	%mkrel 2
+Version: 	0.4
+Release: 	%mkrel 1
 Source:		EditObj2-%{version}.tar.gz
 URL:		http://home.gna.org/oomadness/en/editobj/
 License:	GPLv2
@@ -25,20 +25,20 @@ edition. EditObj2 includes also a tree widget for Tkinter, an event framework
 and a mutiple undo/redo system.
 
 %prep
-%setup -q -n EditObj2-%{version}
+%setup -q -n %{oname}-%{version}
 
 %build
 %{__python} setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install --root=$RPM_BUILD_ROOT
+rm -rf %{buildroot}
+%{__python} setup.py install --root=%{buildroot}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc AUTHORS LICENSE README 
-%python_sitelib/%{name}
-%python_sitelib/*.egg-info
+%{python_sitelib}/%{name}
+%{python_sitelib}/*.egg-info
