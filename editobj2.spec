@@ -42,3 +42,19 @@ rm -rf %{buildroot}
 %doc AUTHORS LICENSE README 
 %{python_sitelib}/%{name}
 %{python_sitelib}/*.egg-info
+
+
+%changelog
+* Sat Oct 08 2011 Andrey Bondrov <abondrov@mandriva.org> 0.4-1mdv2012.0
++ Revision: 703572
+- New version: 0.4
+
+* Sun Oct 31 2010 Funda Wang <fwang@mandriva.org> 0.2.1-2mdv2011.0
++ Revision: 590801
+- rebuild for py2.7
+
+* Sun Apr 18 2010 Sandro Cazzaniga <kharec@mandriva.org> 0.2.1-1mdv2010.1
++ Revision: 536464
+- import editobj2
+
+
